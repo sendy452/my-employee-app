@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:background="@drawable/bg_gradasi"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"></RelativeLayout>
+        <TextView
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:text="MY-EMPLOYEE"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></RelativeLayout>
+        <EditText
+            android:id="@+id/txtEmail"
+            android:paddingLeft="20dp"
+            android:background="@drawable/form"
+            android:drawableStart="@drawable/user"
+            android:drawablePadding="20dp"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"></RelativeLayout>
+        <EditText
+            android:id="@+id/txtPass"
+            android:paddingLeft="20dp"
+            android:background="@drawable/form"
+            android:drawableStart="@drawable/key"
+            android:drawablePadding="20dp"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></RelativeLayout>
+        <Button
+            android:id="@+id/btnLogin"
+            android:backgroundTint="#3498db"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textSize="15dp"
+            android:text="Login"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"></RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
