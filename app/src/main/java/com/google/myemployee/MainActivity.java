@@ -73,12 +73,32 @@ public class MainActivity extends AppCompatActivity {
 
                                 JSONObject userJson = obj.getJSONObject("user");
 
-                                txtNama.setText(userJson.getString("nama"));
                                 txtEmail.setText(userJson.getString("email"));
-                                txtNik.setText(userJson.getString("nik"));
                                 txtNip.setText(userJson.getString("nip"));
-                                txtHp.setText(userJson.getString("nohp"));
-                                txtTLahir.setText(userJson.getString("tlahir"));
+
+                                if (userJson.getString("nama") == "null" || userJson.getString("nama").isEmpty()){
+                                    txtNama.setText("-");
+                                }else {
+                                    txtNama.setText(userJson.getString("nama"));
+                                }
+
+                                if (userJson.getString("nik") == "null" || userJson.getString("nik").isEmpty()){
+                                    txtNik.setText("-");
+                                }else {
+                                    txtNik.setText(userJson.getString("nik"));
+                                }
+
+                                if (userJson.getString("nohp") == "null" || userJson.getString("nohp").isEmpty()){
+                                    txtHp.setText("-");
+                                }else {
+                                    txtHp.setText(userJson.getString("nohp"));
+                                }
+
+                                if (userJson.getString("tlahir") == "null" || userJson.getString("tlahir").isEmpty()){
+                                    txtTLahir.setText("-");
+                                }else {
+                                    txtTLahir.setText(userJson.getString("tlahir"));
+                                }
 
                                 String date = userJson.getString("tgllahir");
                                 SimpleDateFormat spf=new SimpleDateFormat("yyyy-MM-dd");
@@ -87,9 +107,23 @@ public class MainActivity extends AppCompatActivity {
                                 date = spf.format(newDate);
 
                                 txtTglLahir.setText(date);
-                                txtAlamat.setText(userJson.getString("alamat"));
-                                txtNegara.setText(userJson.getString("negara"));
-                                txtJekel.setText(userJson.getString("jekel"));
+                                if (userJson.getString("alamat") == "null" || userJson.getString("alamat").isEmpty()){
+                                    txtAlamat.setText("-");
+                                }else {
+                                    txtAlamat.setText(userJson.getString("alamat"));
+                                }
+
+                                if (userJson.getString("negara") == "null" || userJson.getString("negara").isEmpty()){
+                                    txtNegara.setText("-");
+                                }else {
+                                    txtNegara.setText(userJson.getString("negara"));
+                                }
+
+                                if (userJson.getString("jekel") == "null" || userJson.getString("jekel").isEmpty()){
+                                    txtJekel.setText("-");
+                                }else {
+                                    txtJekel.setText(userJson.getString("jekel"));
+                                }
                                 txtDivisi.setText(userJson.getString("nama_divisi"));
                                 txtBidang.setText(userJson.getString("bidang"));
 
