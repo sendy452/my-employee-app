@@ -48,7 +48,7 @@
             android:background="@drawable/form"
             android:drawableStart="@drawable/user"
             android:drawablePadding="20dp"
-            android:hint="Email"
+            android:hint="tester@gmail.com"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="textEmailAddress"/>
@@ -61,7 +61,7 @@
             android:background="@drawable/form"
             android:drawableStart="@drawable/key"
             android:drawablePadding="20dp"
-            android:hint="Password"
+            android:hint="12345678"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="textPassword"/>
